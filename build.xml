@@ -89,7 +89,7 @@
         <exec executable="${phpmd}" taskname="phpmd">
             <arg path="${basedir}/src"/>
             <arg value="text"/>
-            <arg path="${basedir}/build/phpmd.xml"/>
+            <arg path="${basedir}/app/build/phpmd.xml"/>
         </exec>
         <property name="phpmd.done" value="true"/>
     </target>
@@ -97,7 +97,7 @@
         <exec executable="${phpmd}" taskname="phpmd">
             <arg path="${basedir}/src"/>
             <arg value="xml"/>
-            <arg path="${basedir}/build/phpmd.xml"/>
+            <arg path="${basedir}/app/build/phpmd.xml"/>
             <arg value="--reportfile"/>
             <arg path="${basedir}/build/logs/pmd.xml"/>
         </exec>
