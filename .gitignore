@@ -19,6 +19,3 @@
 
 tests/_output/*
 /build/
-/phpdox.xml
-/phpmd.xml
-/phpunit.xml
