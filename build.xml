@@ -25,6 +25,9 @@
     <target name="static-analysis"
             depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
             description="Performs static analysis"/>
+    <target name="codeception"
+            depends="codeception-unit, codeception-functional"
+            description="Performs tests with codeception"/>
 
     <!-- Adjust the threadCount attribute's value to the number of CPUs -->
     <target name="static-analysis-parallel"
