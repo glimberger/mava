@@ -1,3 +1,7 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+app_about_more:
+  path:     /about/{name}/details
+  defaults: { _controller: AppBundle:About:details}

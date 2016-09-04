@@ -1,0 +1,6 @@
+{# mava/src/AppBundle/Resouces/views/About/user.html.twig #}
+
+<h1>User Profile</h1>
+<strong>Name: </strong>{{user.name}} <br/>
+<strong>Bio: </strong>{{user.bio}} <br/>
+<button type="button" onclick="location.href='{{ path('app_about_more', {'name': user.name}) }}'">more</button>
