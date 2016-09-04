@@ -3,6 +3,25 @@ default:
   extensions:
     Behat\Symfony2Extension: ~
     Behat\MinkExtension:
+      browser_name: chrome
+      symfony2: ~
+      selenium2:
+        wd_host: 'http://127.0.0.1:4444/wd/hub'
+      base_url: 'http://mava.local:8888/app_test.php'
+
+firefox:
+  extensions:
+    Behat\Symfony2Extension: ~
+    Behat\MinkExtension:
+      browser_name: firefox
+      selenium2:
+        wd_host: 'http://127.0.0.1:4444/wd/hub'
+      base_url: 'http://mava.local:8888/app_test.php'
+
+phantomjs:
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://mava.local:8888/app_test.php'
       goutte: ~
-      selenium2: ~ 
-      base_url: http://mava.local:8000
+      selenium2:
+        wd_host: 'http://localhost:8643/wd/hub'
