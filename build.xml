@@ -218,11 +218,22 @@
         <property name="phpunit.done" value="true"/>
     </target>
 
-    <target name="codeception"
+    <target name="codeception-unit"
             unless="codeception.done"
-            depends="prepare" description="Run test with Codeception">
+            depends="prepare" description="Run unit tests with Codeception">
         <exec executable="${codeception}" taskname="codeception">
             <arg value="run"/>
+            <arg value="unit"/>
+        </exec>
+        <property name="codeception.done" value="true"/>
+    </target>
+
+    <target name="codeception-functional"
+            unless="codeception.done"
+            depends="prepare" description="Run functional tests with Codeception">
+        <exec executable="${codeception}" taskname="codeception">
+            <arg value="run"/>
+            <arg value="functional"/>
         </exec>
         <property name="codeception.done" value="true"/>
     </target>
