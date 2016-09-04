@@ -35,8 +35,6 @@ class Workspace
      */
     private $description;
 
-
-
     /**
      * Get id
      *

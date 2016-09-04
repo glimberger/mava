@@ -21,5 +21,4 @@ class DefaultControllerTest extends \Codeception\Test\Unit
     {
         $this->assertTrue(true);
     }
-
 }

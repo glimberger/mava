@@ -1,4 +1,5 @@
 <?php
+
 namespace Helper;
 
 // here you can define custom actions
@@ -6,5 +7,12 @@ namespace Helper;
 
 class Unit extends \Codeception\Module
 {
-
+    public function seeResponseContains($text)
+    {
+        $this->assertContains(
+            $text,
+            $this->getModule('Symfony')->_getResponseContent(),
+            "response contains"
+        );
+    }
 }

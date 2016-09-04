@@ -8,9 +8,13 @@
     <property name="phploc" value="phploc"/>
     <property name="phpmd" value="phpmd"/>
     <property name="phpunit" value="phpunit"/>
+    <property name="codeception" value="${basedir}/vendor/codeception/codeception/codecept"/>
 
+    <!--<target name="full-build"-->
+            <!--depends="prepare,static-analysis,phpunit,phpdox,-check-failure"-->
+            <!--description="Performs static analysis, runs the tests, and generates project documentation"/>-->
     <target name="full-build"
-            depends="prepare,static-analysis,phpunit,phpdox,-check-failure"
+            depends="prepare,static-analysis,codeception,phpdox,-check-failure"
             description="Performs static analysis, runs the tests, and generates project documentation"/>
     <target name="full-build-parallel"
             depends="prepare,static-analysis-parallel,phpunit,phpdox,-check-failure"
@@ -212,6 +216,15 @@
             <arg value="--no-coverage"/>
         </exec>
         <property name="phpunit.done" value="true"/>
+    </target>
+
+    <target name="codeception"
+            unless="codeception.done"
+            depends="prepare" description="Run test with Codeception">
+        <exec executable="${codeception}" taskname="codeception">
+            <arg value="run"/>
+        </exec>
+        <property name="codeception.done" value="true"/>
     </target>
 
     <target name="phpdox"

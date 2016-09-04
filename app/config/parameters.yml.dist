@@ -18,3 +18,9 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # test
+    database_name_test: mava_test
+
+    # dev
+    database_name_dev: mava_dev

@@ -15,7 +15,9 @@ extensions:
 modules:
     config:
         Db:
-            dsn: ''
-            user: ''
-            password: ''
+            dsn: 'mysql:host=localhost;dbname=mava_test'
+            user: 'root'
+            password: '120872'
             dump: tests/_data/dump.sql
+            populate: true # dump will be loaded before the test
+            cleanup: false # dump will be loaded after each test

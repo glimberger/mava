@@ -19,4 +19,4 @@
 
 tests/_output/*
 /build/
-/composer.lock
+tests/_output/*
