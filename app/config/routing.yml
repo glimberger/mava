@@ -2,6 +2,21 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+homepage:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+app_about:
+    path: /about/{name}
+    defaults: { _controller: AppBundle:About:about, name: null }
+
 app_about_more:
-  path:     /about/{name}/details
-  defaults: { _controller: AppBundle:About:details}
+    path:     /about/{name}/details
+    defaults: { _controller: AppBundle:About:details }
+
+app_workspace_show:
+    path:     /workspace/{name}
+    defaults: { _controller: AppBundle:Workspace:show }
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

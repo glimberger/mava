@@ -2,7 +2,6 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
@@ -12,7 +11,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class AboutController extends Controller
 {
     /**
-     * @Route("/about/{name}", name="about-page", defaults={"name":null})
      * @param string $name
      * @return \Symfony\Component\HttpFoundation\Response
      */

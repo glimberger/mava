@@ -3,8 +3,6 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Workspace;
-use Doctrine\Common\Collections\ArrayCollection;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class WorkspaceController extends Controller
@@ -12,8 +10,6 @@ class WorkspaceController extends Controller
     /**
      * @param $name
      * @return \Symfony\Component\HttpFoundation\Response
-     *
-     * @Route("/workspace/{name}", name="workspace_show")
      */
     public function showAction($name)
     {
